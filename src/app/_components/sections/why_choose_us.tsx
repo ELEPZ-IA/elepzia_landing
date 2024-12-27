@@ -2,6 +2,7 @@
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
+import { SectionWrapper } from '../SectionWrapper';
 
 const Circle = ({
     className,
@@ -65,7 +66,7 @@ const WhyChooseUs = () => {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 720]); // Increased rotation for more effect
 
     return (
-        <section className='container max-w-7xl mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-20 relative'>
+        <SectionWrapper className='container max-w-7xl mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-20 relative'>
             <div className='flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-16'>
                 <TextBlock index={0}>
                     At Elepz'ia, our mission is to harness the power of
@@ -181,7 +182,7 @@ const WhyChooseUs = () => {
                     </motion.div>
                 </div>
             </div>
-        </section>
+        </SectionWrapper>
     );
 };
 

@@ -34,7 +34,7 @@
     ".next/types/**/*.ts",
     "next-env.d.ts",
     "dist/types/**/*.ts"
-  ],
+, "src/app/_components/sections/episafe_section"  ],
   "exclude": [
     "node_modules"
   ]

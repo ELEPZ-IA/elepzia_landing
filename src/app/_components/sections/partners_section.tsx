@@ -9,41 +9,40 @@ const PartnersSection = () => {
     const [partnersRef2, partners2InView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <div className='relative'>
-            <div className='absolute -top-10 left-0 w-full h-[500px] bg-[url("/images/donwer.svg")] bg-cover z-[999999999999]'></div>
+        <div className='relative px-4 sm:px-6 md:px-8 pt-16 sm:pt-0'>
+            <div className='absolute top-0 sm:-top-10 left-0 w-full h-[300px] sm:h-[400px] md:h-[500px] bg-[url("/images/donwer.svg")] bg-cover bg-center'></div>
             
             <motion.div 
                 ref={titleRef}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: titleInView ? 1 : 0, y: titleInView ? 0 : 20 }}
                 transition={{ duration: 0.6 }}
-                className='relative -top-20 z-10 flex flex-col justify-start items-center gap-3'
+                className='relative top-0 sm:-top-20 z-10 flex flex-col justify-start items-center gap-2 sm:gap-3'
             >
-                <div className="text-center text-white text-2xl font-normal font-['Outfit'] leading-normal">
+                <div className="text-center text-white text-xl sm:text-2xl font-normal font-['Outfit'] leading-normal">
                     Our Partners
                 </div>
-                <div className="opacity-80 text-center text-white text-lg font-normal font-['Outfit'] leading-7">
+                <div className="opacity-80 text-center text-white text-base sm:text-lg font-normal font-['Outfit'] leading-relaxed max-w-[90%] sm:max-w-none px-4">
                     We are proud to collaborate with leading institutions
                 </div>
             </motion.div>
 
-            <div className='relative z-10 flex flex-col justify-center items-center gap-8'>
+            <div className='relative z-10 flex flex-col justify-center items-center gap-6 sm:gap-8'>
                 <motion.div 
                     ref={partnersRef1}
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: partners1InView ? 1 : 0, x: partners1InView ? 0 : -50 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className='flex flex-wrap justify-center items-center gap-8'
+                    className='flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8'
                 >
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        Charles Nicolles
-                    </div>
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        MIT
-                    </div>
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        Nvidia Inception
-                    </div>
+                    {['Charles Nicolles', 'MIT', 'Nvidia Inception'].map((partner) => (
+                        <div
+                            key={partner}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl sm:text-3xl md:text-[40px] font-normal font-['Outfit'] leading-tight sm:leading-[48px] text-center px-2 sm:px-4"
+                        >
+                            {partner}
+                        </div>
+                    ))}
                 </motion.div>
 
                 <motion.div 
@@ -51,17 +50,16 @@ const PartnersSection = () => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: partners2InView ? 1 : 0, x: partners2InView ? 0 : 50 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className='flex flex-wrap justify-center items-center gap-8'
+                    className='flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8'
                 >
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        Fab Lab
-                    </div>
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        Winwin
-                    </div>
-                    <div className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-[40px] font-normal font-['Outfit'] leading-[48px]">
-                        Orange
-                    </div>
+                    {['Fab Lab', 'Winwin', 'Orange'].map((partner) => (
+                        <div
+                            key={partner}
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl sm:text-3xl md:text-[40px] font-normal font-['Outfit'] leading-tight sm:leading-[48px] text-center px-2 sm:px-4"
+                        >
+                            {partner}
+                        </div>
+                    ))}
                 </motion.div>
             </div>
         </div>

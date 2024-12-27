@@ -3,6 +3,16 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
+const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    }
+};
+
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -47,10 +57,10 @@ function Logo() {
 
 function NavLinks() {
     const links = [
-        { name: 'Home', href: '#home' },
-        { name: 'Episafe', href: '#episafe' },
-        { name: 'Hackini', href: '#hackini' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Home', href: 'home' },
+        { name: 'Episafe', href: 'episafe' },
+        { name: 'Hackini', href: 'hackini' },
+        { name: 'Contact', href: 'contact' }
     ];
 
     return (
@@ -58,8 +68,12 @@ function NavLinks() {
             {links.map((link) => (
                 <a
                     key={link.name}
-                    href={link.href}
-                    className='px-4 py-2 rounded-xl flex items-center transition-transform transform hover:scale-105'>
+                    onClick={(e) => {
+                        e.preventDefault();
+                        scrollToSection(link.href);
+                    }}
+                    href={`#${link.href}`}
+                    className='px-4 py-2 rounded-xl flex items-center transition-transform transform hover:scale-105 cursor-pointer'>
                     <span className='text-white text-base font-light'>
                         {link.name}
                     </span>
@@ -91,10 +105,10 @@ function MobileDrawer({
     onClose: () => void;
 }) {
     const links = [
-        { name: 'Home', href: '#home' },
-        { name: 'Episafe', href: '#episafe' },
-        { name: 'Hackini', href: '#hackini' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Home', href: 'home' },
+        { name: 'Episafe', href: 'episafe' },
+        { name: 'Hackini', href: 'hackini' },
+        { name: 'Contact', href: 'contact' }
     ];
 
     return (
@@ -132,9 +146,13 @@ function MobileDrawer({
                         {links.map((link) => (
                             <a
                                 key={link.name}
-                                href={link.href}
-                                className='px-4 py-3 rounded-xl hover:bg-white/10'
-                                onClick={onClose}>
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    scrollToSection(link.href);
+                                    onClose();
+                                }}
+                                href={`#${link.href}`}
+                                className='px-4 py-3 rounded-xl hover:bg-white/10 cursor-pointer'>
                                 <span className='text-white text-base'>
                                     {link.name}
                                 </span>

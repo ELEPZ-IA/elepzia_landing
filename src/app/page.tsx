@@ -1,11 +1,10 @@
+import { Footer } from './_components/footer';
 import Navbar from './_components/navbar';
 import { ContactSection } from './_components/sections/contact_section';
-import ExploreProjectSection from './_components/sections/explore_project_section';
-import FeatureSection from './_components/sections/feature_section';
-import { Footer } from './_components/sections/footer';
+import EpisafeSection from './_components/sections/episafe_section';
+import HackiniSection from './_components/sections/hackini_section';
 import { HeroSection } from './_components/sections/hero_section';
 import PartnersSection from './_components/sections/partners_section';
-import ProjectsSection from './_components/sections/projects_section';
 import WhyChooseUs from './_components/sections/why_choose_us';
 
 export default function Home() {
@@ -14,9 +13,8 @@ export default function Home() {
             <Navbar />
             <HeroSection />
             <PartnersSection />
-            <ExploreProjectSection />
-            <FeatureSection />
-            <ProjectsSection />
+            <EpisafeSection />
+            <HackiniSection />
             <WhyChooseUs />
             <ContactSection />
             <Footer />
