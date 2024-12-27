@@ -4,7 +4,9 @@ import Image from 'next/image';
 
 export function HeroSection() {
     return (
-        <div id='home' className='relative w-full min-h-screen sm:h-[1100px] z-0 flex items-center justify-center'>
+        <div
+            id='home'
+            className='relative w-full max-h-[calc(100vh+200px)] sm:h-[1100px] flex items-center justify-center pt-28 sm:pt-0 '>
             <Image
                 src='/images/bg.webp'
                 alt='Hero Background'
@@ -12,13 +14,11 @@ export function HeroSection() {
                 className='absolute top-0 left-0 w-full h-full object-cover object-center'
                 priority
             />
-            {/* Add gradient overlay that fades to complete transparency */}
             <div className='absolute inset-0 bg-gradient-to-b from-black/50 via-black/25 to-transparent pointer-events-none' />
-            
-            {/* Add fade to background color at bottom */}
+
             <div className='absolute bottom-0 left-0 w-full h-[400px] bg-gradient-to-t from-[#1c1c1e] to-transparent' />
 
-            <div className='relative w-full px-4 sm:px-6 md:px-[90px] flex flex-col items-center gap-4 sm:gap-6 pt-20 sm:pt-0  z-50'>
+            <div className='relative w-full px-4 sm:px-6 md:px-[90px] flex flex-col items-center gap-4 sm:gap-6 pt-20 sm:pt-0 max-w-screen z-10'>
                 <motion.div
                     initial={{ y: -500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -32,15 +32,14 @@ export function HeroSection() {
                     initial={{ y: -500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className="z-[999] text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal font-['Outfit'] leading-tight sm:leading-[1.2] md:leading-[80px] max-w-[90%] sm:max-w-full">
-                    Empowering Lives Through Technology{' '}
-                    <br className='hidden md:block' /> and Community
+                    className='text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal max-w-[90%] sm:max-w-full'>
+                    Empowering Lives Through Technology and Community
                 </motion.h1>
                 <motion.p
                     initial={{ y: 500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.4 }}
-                    className="text-center text-[#d1d1d6] text-base sm:text-lg md:text-xl font-normal font-['Outfit'] leading-relaxed px-4 sm:px-6 md:px-0 max-w-[90%] sm:max-w-3xl">
+                    className="text-center text-[#d1d1d6] text-base sm:text-lg md:text-xl font-normal font-['Outfit'] leading-relaxed px-4 sm:px-6 md:px-0 max-w-4xl mx-auto">
                     Welcome to Elepzia Resources, where groundbreaking solutions
                     meet community-driven innovation.{' '}
                     <br className='hidden md:block' />

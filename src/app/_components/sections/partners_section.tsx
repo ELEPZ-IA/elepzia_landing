@@ -9,7 +9,7 @@ const PartnersSection = () => {
     const [partnersRef2, partners2InView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <div className='relative px-4 sm:px-6 md:px-8 pt-16 sm:pt-0'>
+        <div className='relative px-4 sm:px-6 md:px-8 pt-16 sm:pt-0 max-w-7xl mx-auto w-full flex flex-col items-center overflow-hidden' >
             <div className='absolute top-0 sm:-top-10 left-0 w-full h-[300px] sm:h-[400px] md:h-[500px] bg-[url("/images/donwer.svg")] bg-cover bg-center'></div>
             
             <motion.div 

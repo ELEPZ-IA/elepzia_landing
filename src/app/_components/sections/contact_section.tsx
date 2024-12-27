@@ -31,7 +31,9 @@ export const ContactSection = () => {
     };
 
     return (
-        <SectionWrapper id='contact' className='relative overflow-x-hidden mt-6 sm:mt-10 z-30'>
+        <SectionWrapper
+            id='contact'
+            className='relative overflow-x-hidden mt-6 sm:mt-10 z-30 '>
             <motion.div
                 style={{
                     position: 'absolute',
@@ -41,9 +43,7 @@ export const ContactSection = () => {
                 }}
                 className='w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] rounded-full bg-gradient-to-r from-[#FFEB9E]/50 via-[#FFEB9E]/50 to-[#F38E79]/50 blur-[10px] pointer-events-none z-0 mt-10'
             />
-            <section
-                id='contact'
-                className='relative w-full max-w-[95%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[40%] mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 flex flex-col items-center z-10'>
+            <div className='max-w-7xl relative w-full max-w-[95%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[40%] mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 flex flex-col items-center z-10'>
                 <span className='inline-block px-4 sm:px-6 py-2 bg-white/5 rounded-full text-white/80 text-sm sm:text-base mb-4'>
                     Contact
                 </span>
@@ -66,11 +66,14 @@ export const ContactSection = () => {
                             </h2>
                         </div>
                         <p className='text-white/80 text-sm sm:text-base'>
-                            Contact us to learn how we can bring your ideas to life
+                            Contact us to learn how we can bring your ideas to
+                            life
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className='space-y-4 sm:space-y-6'>
+                    <form
+                        onSubmit={handleSubmit}
+                        className='space-y-4 sm:space-y-6'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6'>
                             <div className='space-y-1 sm:space-y-2'>
                                 <label className='text-white/80 text-xs sm:text-sm'>
@@ -129,7 +132,7 @@ export const ContactSection = () => {
                         </button>
                     </form>
                 </div>
-            </section>
+            </div>
         </SectionWrapper>
     );
 };

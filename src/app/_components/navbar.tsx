@@ -21,8 +21,8 @@ export default function Navbar() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 1.5, ease: 'easeOut' }}
-            className='fixed top-0 w-full h-[84px] px-2 sm:px-5 md:px-20 pt-4 flex flex-col gap-2.5 z-50'>
-            <div className='w-[90%] mx-auto px-4 py-3 bg-[#1c1c1e]/50 rounded-[18px] border border-white/10 backdrop-blur-xl flex items-center justify-between'>
+            className='fixed top-0 w-full h-[84px] px-2 sm:px-5 md:px-20 pt-4 flex flex-col gap-2.5 z-50 overflow-visible'>
+            <div className='w-full max-w-[90%] mx-auto px-4 py-3 bg-[#1c1c1e]/50 rounded-[18px] border border-white/10 backdrop-blur-xl flex items-center justify-between'>
                 <Logo />
                 <NavLinks />
                 <div className='flex items-center gap-4'>
