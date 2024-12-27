@@ -48,20 +48,6 @@ const ProjectsSection = () => {
                 width={600}
                 className='absolute -right-0 top-0 w-1/4'
             />
-            {/* <Image
-                src='/images/left-circle.svg'
-                alt='Hackini Logo'
-                height={600}
-                width={600}
-                className='absolute -left-80 top-0'
-            /> */}
-            {/* <Image
-                src='/images/right-circle.svg'
-                alt='Hackini Logo'
-                height={800}
-                width={800}
-                className='absolute -right-40 top-0'
-            /> */}
             <div className='flex flex-col items-center gap-20 max-w-7xl mx-auto'>
                 <div className='flex flex-col items-center gap-6 text-center'>
                     <div className='px-8 py-3 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm'>
@@ -87,12 +73,13 @@ const ProjectsSection = () => {
                                 key={index}
                                 className='relative p-8 rounded-2xl border border-[#a2a2a2]/20 bg-white/[2%] backdrop-blur-sm
                           flex flex-col items-center justify-center gap-4 min-h-[300px]
-                          hover:border-[#f38e79]/20 transition-colors'>
+                          hover:border-[#f38e79]/20 transition-all group'>
                                 <Image
                                     src={feature.image}
                                     alt='Feature Icon'
                                     width={100}
                                     height={100}
+                                    className='transition-transform duration-500 ease-in-out group-hover:scale-125'
                                 />
                                 <h3 className='text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl md:text-3xl font-normal text-center'>
                                     {feature.title}
@@ -108,12 +95,15 @@ const ProjectsSection = () => {
                         {features.slice(2, 5).map((feature, index) => (
                             <div
                                 key={index + 2}
-                                className='relative p-8 rounded-2xl border border-[#a2a2a2]/20 bg-white/[2%] backdrop-blur-sm flex flex-col items-center justify-center gap-4 min-h-[300px] hover:border-[#f38e79]/20 transition-colors'>
+                                className='relative p-8 rounded-2xl border border-[#a2a2a2]/20 bg-white/[2%] backdrop-blur-sm 
+                                flex flex-col items-center justify-center gap-4 min-h-[300px] 
+                                hover:border-[#f38e79]/20 transition-all group'>
                                 <Image
                                     src={feature.image}
                                     alt='Feature Icon'
                                     width={100}
                                     height={100}
+                                    className='transition-transform duration-500 ease-in-out group-hover:scale-125'
                                 />
                                 <h3 className='text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl md:text-3xl font-normal text-center'>
                                     {feature.title}

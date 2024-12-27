@@ -1,5 +1,5 @@
 'use client';
-
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -7,7 +7,11 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className='fixed top-0 w-full h-[84px] px-2 sm:px-5 md:px-20 pt-4 flex flex-col gap-2.5 z-50'>
+        <motion.div
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5, ease: 'easeOut' }}
+            className='fixed top-0 w-full h-[84px] px-2 sm:px-5 md:px-20 pt-4 flex flex-col gap-2.5 z-50'>
             <div className='w-[90%] mx-auto px-4 py-3 bg-[#1c1c1e]/50 rounded-[18px] border border-white/10 backdrop-blur-xl flex items-center justify-between'>
                 <Logo />
                 <NavLinks />
@@ -23,7 +27,7 @@ export default function Navbar() {
                 </div>
             </div>
             <MobileDrawer isOpen={isOpen} onClose={() => setIsOpen(false)} />
-        </div>
+        </motion.div>
     );
 }
 
@@ -31,7 +35,7 @@ function Logo() {
     return (
         <div className='flex items-center'>
             <Image
-                src='/images/logo.png'
+                src='/images/logo.webp'
                 alt='Logo'
                 width={40}
                 height={40}

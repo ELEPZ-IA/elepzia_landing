@@ -27,11 +27,13 @@ const navigationLinks = {
 
 export const Footer = () => {
     return (
-        <footer className='relative bg-[#1c1c1e] border-t border-[#a2a2a2] px-4 md:px-20 pt-20 pb-16'>
+        <footer className='relative bg-[#1c1c1e] px-4 md:px-20 pt-[250px] pb-16 -mt-[220px] overflow-hidden'>
             {/* Blur Effects */}
             <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                 <div className='absolute bottom-1/4 left-1/4 w-[300px] h-[247px] bg-[#d37604] rounded-full opacity-30 blur-[500px]' />
                 <div className='absolute bottom-1/4 right-1/4 w-[300px] h-[247px] bg-[#6ecab0] rounded-full opacity-30 blur-[500px]' />
+                <div className="w-[300px] h-[247px] absolute top-[220px] left-0 bg-[#d37604]/50 rounded-[900px] blur-[300px]" />
+                <div className="w-[300px] h-[247px] absolute top-[220px] right-0 bg-[#6ecab0]/50 rounded-[900px] blur-[300px]" />
             </div>
 
             <div className='relative z-10 max-w-7xl mx-auto'>
@@ -39,7 +41,7 @@ export const Footer = () => {
                     {/* Brand Section */}
                     <div className='lg:col-span-1'>
                         <Image
-                            src='/logo.png'
+                            src='/images/logo.webp'
                             alt='Brand Logo'
                             width={65}
                             height={102}
@@ -106,13 +108,17 @@ export const Footer = () => {
 
                         <nav>
                             <h3 className='text-white text-lg mb-6'>Socials</h3>
-                            <ul className='space-y-4'>
+                            <ul className='grid grid-rows-3 grid-cols-2 gap-4'>
                                 {navigationLinks.social.map((link) => (
-                                    <li key={link.name}>
+                                    <li key={link.name} className='contents'>
                                         <Link
                                             href={link.href}
-                                            className='flex items-center gap-4 text-[#a2a2a2] hover:text-white transition-colors'>
-                                            <span>{link.name}</span>
+                                            className='flex items-center text-[#a2a2a2] hover:text-white transition-colors'>
+                                            {link.name}
+                                        </Link>
+                                        <Link
+                                            href={link.href}
+                                            className='flex justify-start items-center text-[#a2a2a2] hover:text-white transition-colors '>
                                             <Image
                                                 src={link.icon}
                                                 alt={link.name}

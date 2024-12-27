@@ -1,6 +1,7 @@
 'use client';
 
 import features from '@/app/_data/features.json';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -49,12 +50,30 @@ const Content = ({ name, description }: ContentProps) => {
         <>
             <div className='flex flex-col gap-4 md:gap-8 lg:gap-12 mt-8 md:mt-20 w-full md:max-w-[60%]'>
                 <div className='space-y-2'>
-                    <h3 className='text-xl md:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] break-words'>
-                        {name}
-                    </h3>
-                    <p className='text-base md:text-lg text-gray-300 pt-2 md:pt-4'>
-                        {description}
-                    </p>
+                    <AnimatePresence mode='wait'>
+                        <motion.h3 
+                            key={name}
+                            initial={{ x: 20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: -20, opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className='text-xl md:text-2xl lg:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] break-words'
+                        >
+                            {name}
+                        </motion.h3>
+                    </AnimatePresence>
+                    <AnimatePresence mode='wait'>
+                        <motion.p 
+                            key={description}
+                            initial={{ x: 20, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: -20, opacity: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            className='text-base md:text-lg text-gray-300 pt-2 md:pt-4'
+                        >
+                            {description}
+                        </motion.p>
+                    </AnimatePresence>
                 </div>
             </div>
 
