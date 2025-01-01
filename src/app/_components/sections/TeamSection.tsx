@@ -72,7 +72,7 @@ const TeamSection = () => {
     };
 
     return (
-        <SectionWrapper id="team" className="w-full flex flex-col justify-center mb-20">
+        <SectionWrapper id="team" className="w-full flex flex-col justify-center mt-20">
             <motion.div
                 ref={teamRef}
                 initial={{ opacity: 0, y: 30 }}

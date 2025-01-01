@@ -84,7 +84,7 @@ const ExpertsSection = () => {
     const expertsInView = useInView(expertsRef, { once: true, margin: '-100px' });
 
     return (
-        <SectionWrapper id="experts" className="w-full flex flex-col justify-center mb-20">
+        <SectionWrapper id="experts" className="w-full flex flex-col justify-center mt-20">
             <motion.div
                 ref={expertsRef}
                 initial={{ opacity: 0, y: 30 }}

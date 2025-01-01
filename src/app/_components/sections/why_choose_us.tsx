@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
     const rotate = useTransform(scrollYProgress, [0, 1], [0, 720]); // Increased rotation for more effect
 
     return (
-        <SectionWrapper>
+        <SectionWrapper className='mt-20'>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

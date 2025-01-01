@@ -1,7 +1,6 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { RoadmapProvider } from '../../_contexts/RoadmapContext';
 import { RoadmapItem } from '../RoadmapItem';
 import { SectionWrapper } from '../SectionWrapper';
 
@@ -39,44 +38,60 @@ const RoadmapSection = () => {
     const roadmapInView = useInView(roadmapRef, { once: true, margin: '-100px' });
 
     return (
-        <SectionWrapper id="roadmap" className="py-20 mt-24 w-full flex justify-center">
-            <RoadmapProvider>
-                <div className="max-w-7xl w-full px-4 md:px-6 lg:px-8 mx-auto relative">
-                    {/* Section Title */}
-                    <motion.div
-                        ref={roadmapRef}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.8 }}
-                        className="flex flex-col items-center text-center gap-6"
-                    >
-                        <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-4xl md:text-5xl lg:text-[56px] font-normal">
-                            Milestones
-                        </h2>
-                    </motion.div>
-
-                    {/* Vertical Timeline */}
-                    <div className="relative mt-16">
-                        {/* Timeline Line for Desktop */}
-                        <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#F38E79] to-[#FFEB9E]"></div>
-
-                        {/* Timeline Line for Mobile */}
-                        <div className="sm:hidden absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#F38E79] to-[#FFEB9E]"></div>
-
-                        <div className="flex flex-col items-start sm:items-center gap-12">
-                            {roadmapData.map((item, index) => (
-                                <RoadmapItem
-                                    key={index}
-                                    period={item.period}
-                                    description={item.description}
-                                    link={item.link}
-                                    index={index}
-                                />
-                            ))}
-                        </div>
+        <SectionWrapper id="roadmap" className="w-full flex flex-col justify-center mt-20">
+            <motion.div
+                ref={roadmapRef}
+                initial={{ opacity: 0, y: 30 }}
+                animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8 }}
+                className="flex flex-col justify-start items-center gap-6 h-[316px] md:h-auto p-4 px-6 sm:px-8 md:px-12 relative overflow-hidden w-full"
+            >
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6 }}
+                    className="px-8 py-3 bg-gradient-to-r from-white/5 to-white/2 rounded-[88px] border border-white/10 backdrop-blur-lg"
+                >
+                    <div className="text-center text-white text-base font-light font-['Outfit']">
+                        Our Journey
                     </div>
+                </motion.div>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-4xl md:text-[56px] font-normal font-['Outfit'] leading-tight md:leading-[64px]"
+                >
+                    Milestones and Achievements
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="text-center text-[#d1d1d6] text-lg md:text-xl font-normal font-['Outfit'] leading-relaxed md:leading-loose max-w-4xl mx-auto"
+                >
+                    Track our progress and success as we revolutionize healthcare technology
+                </motion.p>
+            </motion.div>
+
+            <div className="max-w-7xl w-full px-4 md:px-6 lg:px-8 mx-auto relative mt-16">
+                {/* Timeline Lines */}
+                <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-[#F38E79] to-[#FFEB9E]"></div>
+                <div className="sm:hidden absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#F38E79] to-[#FFEB9E]"></div>
+
+                {/* Timeline Items */}
+                <div className="flex flex-col items-start sm:items-center gap-12">
+                    {roadmapData.map((item, index) => (
+                        <RoadmapItem
+                            key={index}
+                            period={item.period}
+                            description={item.description}
+                            link={item.link}
+                            index={index}
+                        />
+                    ))}
                 </div>
-            </RoadmapProvider>
+            </div>
         </SectionWrapper>
     );
 };
