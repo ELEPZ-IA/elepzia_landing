@@ -6,7 +6,7 @@ export function HeroSection() {
     return (
         <div
             id='home'
-            className='relative w-full max-h-[calc(100vh+200px)] sm:h-[1100px] flex items-center justify-center pt-28 sm:pt-0 '>
+            className='relative w-full max-h-[calc(100vh+300px)] sm:h-[1200px] flex items-center justify-center pt-20 sm:pt-0 '>
             <Image
                 src='/images/bg.webp'
                 alt='Hero Background'
@@ -18,7 +18,7 @@ export function HeroSection() {
 
             <div className='absolute bottom-0 left-0 w-full h-[400px] bg-gradient-to-t from-[#1c1c1e] to-transparent' />
 
-            <div className='relative w-full px-4 sm:px-6 md:px-[90px] flex flex-col items-center gap-4 sm:gap-6 pt-20 sm:pt-0 max-w-screen z-10'>
+            <div className='relative w-full px-4 sm:px-6 md:px-[90px] flex flex-col items-center gap-4 sm:gap-8 pt-20 sm:pt-0 max-w-screen z-10'>
                 <motion.div
                     initial={{ y: -500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -32,7 +32,7 @@ export function HeroSection() {
                     initial={{ y: -500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
-                    className='text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal max-w-[90%] sm:max-w-full'>
+                    className='text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-normal max-w-[90%] sm:max-w-full leading-normal sm:leading-normal pb-2'>
                     Empowering Lives Through Technology and Community
                 </motion.h1>
                 <motion.p
