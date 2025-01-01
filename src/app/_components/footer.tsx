@@ -6,17 +6,17 @@ import Link from 'next/link';
 const navigationLinks = {
     platform: [
         { name: 'Home', href: '/' },
-        { name: "Elepz'ia", href: '/elepzia' },
-        { name: 'Development Services', href: '/services' },
-        { name: 'Contact', href: '/contact' }
+        { name: "Elepz'ia", href: '' },
+        { name: 'Development Services', href: '' },
+        { name: 'Contact', href: '' }
     ],
     support: [
-        { name: 'Help Centre', href: '/help' },
-        { name: 'FAQs', href: '/faqs' }
+        { name: 'Help Centre', href: '' },
+        { name: 'FAQs', href: '' }
     ],
     legal: [
-        { name: 'Terms of services', href: '/terms' },
-        { name: 'Privacy Policy', href: '/privacy' }
+        { name: 'Terms of services', href: '' },
+        { name: 'Privacy Policy', href: '' }
     ],
     social: [
         { name: 'Email', href: 'mailto:contact@elepzia.tn', icon: '/icons/email.svg' },

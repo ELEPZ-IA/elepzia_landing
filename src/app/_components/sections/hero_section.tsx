@@ -51,12 +51,20 @@ export function HeroSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.4 }}
                     className='flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0'>
-                    <button className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-gradient-to-r from-white/14 to-white/8 rounded-xl shadow-inner border border-white/25 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:from-white/20 hover:to-white/10 transition-all">
-                        Explore our projects
-                    </button>
-                    <button className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-[#007bff] rounded-xl shadow-inner border-2 border-[#007bff]/30 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:bg-[#007bff]/90 transition-all">
-                        Learn About Episafe
-                    </button>
+                    <a
+                        href="https://forms.gle/UdmuFt8SM8Me5KVp6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-gradient-to-r from-white/14 to-white/8 rounded-xl shadow-inner border border-white/25 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:from-white/20 hover:to-white/10 transition-all">
+                        International Survey
+                    </a>
+                    <a
+                        href="https://forms.gle/wDK3ZxnR86Jpb68o9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-[#007bff] rounded-xl shadow-inner border-2 border-[#007bff]/30 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:bg-[#007bff]/90 transition-all">
+                        Local Survey (Tunisia)
+                    </a>
                 </motion.div>
             </div>
             <div className='absolute bottom-0 left-0 w-full h-[154px] sm:h-[254px] bg-[#1c1c1e] blur-[100px] sm:blur-[150px]' />
