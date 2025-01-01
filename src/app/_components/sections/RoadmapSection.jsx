@@ -8,27 +8,27 @@ const roadmapData = [
     {
         period: '2024',
         description: '🎥 Presentation of Episafe on Dclick, a national TV show, with medical experts to raise awareness and collect funds for clinical trials.',
-        link: 'https://www.linkedin.com/posts/example2',
+        link: 'https://www.linkedin.com/posts/elepzia_elepzia-episafe-healthcareinnovation-activity-7262425383403196417-1SK1?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },
     {
         period: '2024',
         description: '🌍 Participation in ADAPT AFRICA BC & Resilience Conference, highlighting our impact on the healthcare industry with our EPISAFE solution.',
-        link: 'https://www.linkedin.com/posts/example3',
+        link: 'https://www.linkedin.com/posts/elepzia_elepzia-healthcare-africa-activity-7255653134759247873-ncnN?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },
     {
         period: '2024',
         description: '🇹🇳 Collaboration with IEEE ESSTHS at IASTAM 2024, organizing workshops on AI and entrepreneurship to inspire future engineers.',
-        link: 'https://www.linkedin.com/posts/example4',
+        link: 'https://www.linkedin.com/posts/elepzia_innovation-ai-entrepreneurship-activity-7254900913792831491-UsJN?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },
     {
         period: '2024',
         description: '🤝 Integration into the NVIDIA Inception program, enhancing our internal AI projects with cutting-edge resources.',
-        link: 'https://www.linkedin.com/posts/example5',
+        link: 'https://www.linkedin.com/posts/elepzia_ai-technology-nvidia-activity-7259224477190746113-HTPe?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },
     {
         period: '2023',
         description: '🥉 Third place at OSC 2023 (Orange Summer Challenge) with our innovative Episafe solution, demonstrating our commitment to health innovation.',
-        link: 'https://www.linkedin.com/posts/example6',
+        link: 'https://www.linkedin.com/posts/khalil-azzabi-6915771bb_episafe-revolutionizing-epilepsy-care-ugcPost-7132063815210295296-FGlt?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },
 ];
 
