@@ -2,7 +2,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import { useRoadmap } from './RoadmapContext';
+import { useRoadmap } from '../_contexts/RoadmapContext';
 
 interface RoadmapItemProps {
     period: string;

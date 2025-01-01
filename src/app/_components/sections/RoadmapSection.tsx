@@ -1,7 +1,7 @@
 'use client';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { RoadmapProvider } from '../RoadmapContext';
+import { RoadmapProvider } from '../../_contexts/RoadmapContext';
 import { RoadmapItem } from '../RoadmapItem';
 import { SectionWrapper } from '../SectionWrapper';
 
