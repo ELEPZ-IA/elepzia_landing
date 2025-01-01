@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'custom-gradient-start': '#F38E79',
+        'custom-gradient-mid': '#FFEB9E',
+        'custom-gradient-end': '#B2CFF8',
       },
     },
   },

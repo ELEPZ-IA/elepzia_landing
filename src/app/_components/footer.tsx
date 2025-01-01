@@ -19,11 +19,17 @@ const navigationLinks = {
         { name: 'Privacy Policy', href: '/privacy' }
     ],
     social: [
-        { name: 'Instagram', href: '#', icon: '/icons/insta.svg' },
-        { name: 'YouTube', href: '#', icon: '/icons/youtube.svg' },
-        { name: 'Twitter', href: '#', icon: '/icons/twitter.svg' }
+        { name: 'Email', href: 'mailto:contact@elepzia.tn', icon: '/icons/email.svg' },
+        { name: 'YouTube', href: 'https://www.youtube.com/channel/UC-o_Eq69e2zaNdEoNTPx7aA', icon: '/icons/youtube.svg' },
+        { name: 'Twitter', href: 'https://x.com/Elepzia1', icon: '/icons/twitter.svg' },
+        {
+            name: 'LinkedIn',
+            href: 'https://www.linkedin.com/company/elepzia/',
+            icon: '/icons/linkedin.svg'
+        }
     ]
 };
+
 
 export const Footer = () => {
     return (
@@ -136,7 +142,7 @@ export const Footer = () => {
 
                 <div className='border-t border-[#a2a2a2] pt-4 sm:pt-8'>
                     <p className='text-center text-[#a2a2a2] text-sm sm:text-base'>
-                        2024 "Brand". All rights reserved
+                        2024 "Elepzia". All rights reserved
                     </p>
                 </div>
             </div>

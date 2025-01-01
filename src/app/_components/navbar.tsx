@@ -59,7 +59,8 @@ function NavLinks() {
     const links = [
         { name: 'Home', href: 'home' },
         { name: 'Episafe', href: 'episafe' },
-        { name: 'Hackini', href: 'hackini' },
+        { name: 'Team', href: 'team' },
+        { name: 'Experts', href: 'experts' },
         { name: 'Contact', href: 'contact' }
     ];
 
