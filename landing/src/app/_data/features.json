@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Predict Seizures",
+        "description": "Anticipates seizures up to 10 minutes in advance."
+    },
+    {
+        "id": 2,
+        "name": "Real-Time Alerts",
+        "description": "Sends emergency notifications and shares geolocation for immediate assistance."
+    },
+    {
+        "id": 3,
+        "name": "Continuous Monitoring",
+        "description": "Tracks physiological signals via a smart bracelet, mobile, and web apps."
+    },
+    {
+        "id": 4,
+        "name": "Medication Reminders",
+        "description": "Keeps treatment schedules on track."
+    },
+    {
+        "id": 5,
+        "name": "Medical Chatbot",
+        "description": "Provides personalized guidance and answers to epilepsy-related queries."
+    }
+]
