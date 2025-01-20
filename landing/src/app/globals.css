@@ -32,3 +32,10 @@ body {
 body.drawer-open {
   overflow: hidden;
 }
+
+.gradiant-title {
+  background: linear-gradient(90deg, #F38E79 0%, #FFEB9E 29.74%, #FEBFB9 68.75%, #B2CFF8 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

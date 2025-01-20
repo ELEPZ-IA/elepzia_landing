@@ -41,10 +41,10 @@ const RoadmapSection = () => {
         <SectionWrapper id="roadmap" className="w-full flex flex-col justify-center mt-20">
             <motion.div
                 ref={roadmapRef}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }} // reduced from 30 to 20
                 animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8 }}
-                className="flex flex-col justify-start items-center gap-6 h-[316px] md:h-auto p-4 px-6 sm:px-8 md:px-12 relative overflow-hidden w-full"
+                className="flex flex-col justify-start items-center gap-6 min-h-[316px] p-4 px-6 sm:px-8 md:px-12 relative w-full overflow-hidden"
             >
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const RoadmapSection = () => {
                     <div className="text-center text-white text-base font-light font-['Outfit']">
                         Our Journey
                     </div>
-                </motion.div>
+                </motion.div> 
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     animate={roadmapInView ? { opacity: 1, y: 0 } : {}}
@@ -80,7 +80,7 @@ const RoadmapSection = () => {
                 <div className="sm:hidden absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-[#F38E79] to-[#FFEB9E]"></div>
 
                 {/* Timeline Items */}
-                <div className="flex flex-col items-start sm:items-center gap-12">
+                <div className="flex flex-col items-start sm:items-center gap-12 overflow-x-hidden">
                     {roadmapData.map((item, index) => (
                         <RoadmapItem
                             key={index}
