@@ -17,7 +17,7 @@ const teamMembers = [
     },
     { 
         name: 'Fedi Naimi', 
-        role: 'Co-CEO & Co-founder', 
+        role: 'COO & Co-founder', 
         description: 'Expert in strategic planning and execution', 
         image: '/images/fedi.jpg', 
         email: 'fedi.naimi@elepzia.tn', 
