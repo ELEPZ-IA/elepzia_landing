@@ -60,11 +60,11 @@ jobs:
             fi
             
             # Start or restart the application
-            pm2 describe "nextjs-app" > /dev/null
+            pm2 describe "elepzia_landing" > /dev/null
             if [ $? -eq 0 ]; then
-              pm2 restart nextjs-app
+              pm2 restart elepzia_landing
             else
-              pm2 start npm --name "nextjs-app" -- start
+              pm2 start npm --name "elepzia_landing" -- start
             fi
             
             # Save PM2 configuration and setup startup
