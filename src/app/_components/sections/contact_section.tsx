@@ -62,12 +62,11 @@ export const ContactSection = () => {
                                 className='w-5 sm:w-6'
                             />
                             <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-xl sm:text-2xl font-normal'>
-                                Let's Innovate Together
+                                Contact us
                             </h2>
                         </div>
                         <p className='text-white/80 text-sm sm:text-base'>
-                            Contact us to learn how we can bring your ideas to
-                            life
+                            Give feedback or ask a question
                         </p>
                     </div>
 

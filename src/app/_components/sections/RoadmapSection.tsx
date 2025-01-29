@@ -17,11 +17,6 @@ const roadmapData = [
     },
     {
         period: '2024',
-        description: '🇹🇳 Collaboration with IEEE ESSTHS at IASTAM 2024, organizing workshops on AI and entrepreneurship to inspire future engineers.',
-        link: 'https://www.linkedin.com/posts/elepzia_innovation-ai-entrepreneurship-activity-7254900913792831491-UsJN?utm_source=social_share_sheet&utm_medium=member_desktop_web',
-    },
-    {
-        period: '2024',
         description: '🌍 Participation in ADAPT AFRICA BC & Resilience Conference, highlighting our impact on the healthcare industry with our EPISAFE solution.',
         link: 'https://www.linkedin.com/posts/elepzia_elepzia-healthcare-africa-activity-7255653134759247873-ncnN?utm_source=social_share_sheet&utm_medium=member_desktop_web',
     },

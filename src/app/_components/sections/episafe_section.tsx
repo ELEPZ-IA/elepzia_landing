@@ -10,7 +10,7 @@ import { SectionWrapper } from '../SectionWrapper';
 const services = [
     {
         title: 'Predict Seizures',
-        description: 'Anticipates seizures up to 10 minutes in advance.',
+        description: 'Anticipates seizures up to 15 minutes in advance.',
         image: '/images/episafe/epi1.svg'
     },
     {
@@ -43,7 +43,7 @@ const EpisafeSection = () => {
             <SectionHeader
                 title='Episafe: Smart Seizure Prediction & Care'
                 description=' Episafe is revolutionizing epilepsy care with advanced AI and IoT solutions. Designed for safety, independence, and peace of mind, Episafe empowers both patients and caregivers.'
-                tag='Explore Our Projects: Episafe'
+                tag='Explore Our Project: Episafe'
             />
             <div className='relative'>
                 {/* Horizontal lines */}

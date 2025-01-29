@@ -12,7 +12,7 @@ const experts = [
         image: '/images/ghassen.jpg',
     },
     {
-        name: 'Nadia Benali',
+        name: 'Pr.Nadia Benali',
         role: 'Professor of Neurology, CHU Charles Nicolle',
         description: 'Medical Advisor at Elepzia',
         image: '/images/nadia.jpg',
