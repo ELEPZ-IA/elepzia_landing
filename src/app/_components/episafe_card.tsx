@@ -12,16 +12,16 @@ export default function EpisafeCard({
     image
 }: Readonly<Props>) {
     return (
-        <div className='flex flex-col gap-16 items-center px-12 py-12 bg-[#202021]'>
+        <div className='flex flex-col gap-16 items-center justify-between px-12 py-12 bg-[#202021]'>
             <div className='flex flex-col gap-4 items-center'>
-                <h2 className='text-2xl font-bold text-center'>{title}</h2>
-                <p className='text-center'>{description}</p>
+                <h2 className='text-4xl text-center gradiant-title'>{title}</h2>
+                <p className='text-center text-white/50'>{description}</p>
             </div>
             <Image
                 src={image}
                 alt={title}
                 width={500}
-                height={300}
+                height={500}
                 className='rounded-lg'
             />
         </div>

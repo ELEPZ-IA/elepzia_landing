@@ -2,6 +2,7 @@
 
 import SectionHeader from '@/components/SectionHeader';
 import { useMouseRotation } from '@/hooks/useMouseRotation';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRef } from 'react';
 import EpisafeCard from '../episafe_card';
@@ -39,12 +40,32 @@ const EpisafeSection = () => {
     return (
         <SectionWrapper
             id='episafe'
-            className='w-full flex flex-col gap-40 justify-center mt-60'>
-            <SectionHeader
-                title='Episafe: Smart Seizure Prediction & Care'
-                description=' Episafe is revolutionizing epilepsy care with advanced AI and IoT solutions. Designed for safety, independence, and peace of mind, Episafe empowers both patients and caregivers.'
-                tag='Explore Our Project: Episafe'
-            />
+            className='w-full flex flex-col justify-center mt-60'>
+                <SectionHeader
+                    title='Episafe: Smart Seizure Prediction & Care'
+                    description=' Episafe is revolutionizing epilepsy care with advanced AI and IoT solutions. Designed for safety, independence, and peace of mind, Episafe empowers both patients and caregivers.'
+                    tag='Explore Our Project: Episafe'
+                />
+            <motion.div
+                    initial={{ y: 500, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 1.2, delay: 0.4 }}
+                    className='flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0 mt-5 mb-20'>
+                    <a
+                        href="https://forms.gle/UdmuFt8SM8Me5KVp6"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-gradient-to-r from-white/14 to-white/8 rounded-xl shadow-inner border border-white/25 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:bg-white/10 duration-300 transition-all">
+                        EpiSafe International Survey
+                    </a>
+                    <a
+                        href="https://forms.gle/wDK3ZxnR86Jpb68o9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full sm:w-auto px-6 sm:px-10 py-3 bg-[#007bff] rounded-xl shadow-inner border-2 border-[#007bff]/30 text-white text-sm sm:text-base font-normal font-['Outfit'] hover:bg-[#007bff]/80 transition-all duration-300">
+                        EpiSafe Local Survey (Tunisia)
+                    </a>
+            </motion.div>
             <div className='relative'>
                 {/* Horizontal lines */}
                 <div className='hidden md:block absolute h-0.5 bg-white/10 top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-[90%]'></div>
@@ -90,6 +111,7 @@ const EpisafeSection = () => {
                     <div className='hidden md:block absolute w-0.5 bg-white/10 top-1/2 right-0 transform -translate-x-1/2 -translate-y-1/2 z-10 h-full'></div>
                 </div>
             </div>
+            
         </SectionWrapper>
     );
 };

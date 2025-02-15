@@ -26,8 +26,33 @@ export const ContactSection = () => {
         message: ''
     });
 
-    const handleSubmit = (e: FormEvent) => {
+    const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        setLoading(true);
+        setStatus('idle');
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) throw new Error('Failed to send message');
+
+            setStatus('success');
+            setFormData({ name: '', email: '', message: '' });
+        } catch (error) {
+            console.error('Error:', error);
+            setStatus('error');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -43,12 +68,12 @@ export const ContactSection = () => {
                 }}
                 className='w-[150px] sm:w-[200px] h-[150px] sm:h-[200px] rounded-full bg-gradient-to-r from-[#FFEB9E]/50 via-[#FFEB9E]/50 to-[#F38E79]/50 blur-[10px] pointer-events-none z-0 mt-10'
             />
-            <div className='max-w-7xl relative w-full max-w-[95%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[40%] mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 flex flex-col items-center z-10'>
+            <div className='relative w-full max-w-[95%] sm:max-w-[85%] md:max-w-[75%] lg:max-w-[60%] xl:max-w-[40%] mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16 flex flex-col items-center z-10'>
                 <span className='inline-block px-4 sm:px-6 py-2 bg-white/5 rounded-full text-white/80 text-sm sm:text-base mb-4'>
                     Contact
                 </span>
                 <div className='relative w-full bg-[#1c1c1e]/50 rounded-2xl border-2 border-[#a2a2a2]/10 backdrop-blur-xl p-4 sm:p-6 md:p-8 lg:p-10'>
-                    <div className='absolute inset-0 overflow-hidden'>
+                    <div className='absolute inset-0 overflow-hidden pointer-events-none'>
                         <div className='absolute top-0 left-0 w-40 h-40 bg-[#d37604]/20 rounded-full blur-[100px]' />
                         <div className='absolute top-0 right-0 w-40 h-40 bg-[#6ecab0]/20 rounded-full blur-[100px]' />
                     </div>
@@ -124,10 +149,19 @@ export const ContactSection = () => {
                             />
                         </div>
 
+                        {status === 'success' && (
+                            <p className="text-green-400 text-sm text-center">Message sent successfully!</p>
+                        )}
+                        
+                        {status === 'error' && (
+                            <p className="text-red-400 text-sm text-center">Failed to send message. Please try again.</p>
+                        )}
+
                         <button
+                        onClick={() => console.log('clicked')}
                             type='submit'
-                            className='w-full px-8 sm:px-10 py-3 sm:py-4 bg-[#2d7afe] rounded-xl shadow-[inset_2px_2px_4px_0px_rgba(255,255,255,0.25)] border-2 border-[#2d7afe]/30 text-white text-sm sm:text-base transition-all hover:bg-[#2d7afe]/90'>
-                            Send message
+                            className='w-full px-8 sm:px-10 py-3 sm:py-4 bg-[#2d7afe] rounded-xl border-2 border-[#2d7afe]/30 text-white text-sm sm:text-base transition-all hover:bg-[#2d7afe]/90 disabled:opacity-50'>
+                            {loading ? 'Sending...' : 'Send message'}
                         </button>
                     </form>
                 </div>
