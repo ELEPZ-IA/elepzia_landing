@@ -4,7 +4,7 @@ echo "🚀 Starting deployment process..."
 
 # Install dependencies
 echo "📦 Installing dependencies..."
-npm ci --only=production -f
+npm ci -f
 
 # Build the application
 echo "🔨 Building the application..."
