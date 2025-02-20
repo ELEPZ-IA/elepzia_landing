@@ -2,7 +2,7 @@
 
 import { Locale } from '@/i18n/config';
 import { setUserLocale } from '@/services/locale';
-import { Globe } from '@heroicons/react/20/solid';
+import { GlobeAltIcon } from '@heroicons/react/20/solid';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState, useTransition } from 'react';
 
@@ -26,7 +26,7 @@ export default function LanguageSelector() {
                 onClick={() => setIsOpen(!isOpen)}
                 className='p-2 bg-[#007bff] rounded-full shadow-inner border-2 border-[#007bff]/30 flex items-center justify-center transition-transform transform hover:scale-105 active:scale-95'
                 disabled={isPending}>
-                <GlobeIcon
+                <GlobeAltIcon
                     className={`h-6 w-6 text-white ${isPending ? 'opacity-50' : ''}`}
                 />
             </button>
