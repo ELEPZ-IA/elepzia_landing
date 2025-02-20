@@ -1,14 +1,16 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
+import LanguageSelector from './language-selector';
 
 const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView({
             behavior: 'smooth',
-            block: 'start',
+            block: 'start'
         });
     }
 };
@@ -27,7 +29,7 @@ export default function Navbar() {
                 <NavLinks />
                 <div className='flex items-center gap-4'>
                     <div className='hidden md:block'>
-                        <GetStartedButton />
+                        <LanguageSelector />
                     </div>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
@@ -56,27 +58,28 @@ function Logo() {
 }
 
 function NavLinks() {
+    const t = useTranslations('nav');
     const links = [
-        { name: 'Home', href: 'home' },
-        { name: 'Episafe', href: 'episafe' },
-        { name: 'Team', href: 'team' },
-        { name: 'Experts', href: 'experts' },
-        { name: 'Contact', href: 'contact' }
+        { id: 'home', href: 'home' },
+        { id: 'episafe', href: 'episafe' },
+        { id: 'team', href: 'team' },
+        { id: 'experts', href: 'experts' },
+        { id: 'contact', href: 'contact' }
     ];
 
     return (
         <div className='hidden md:flex gap-4 items-center'>
-            {links.map((link) => (
+            {links.map(link => (
                 <a
-                    key={link.name}
-                    onClick={(e) => {
+                    key={link.id}
+                    onClick={e => {
                         e.preventDefault();
                         scrollToSection(link.href);
                     }}
                     href={`#${link.href}`}
                     className='px-4 py-2 rounded-xl flex items-center transition-transform transform hover:scale-105 cursor-pointer'>
                     <span className='text-white text-base font-light'>
-                        {link.name}
+                        {t(`links.${link.id}`)}
                     </span>
                 </a>
             ))}
@@ -105,14 +108,14 @@ function MobileDrawer({
     isOpen: boolean;
     onClose: () => void;
 }) {
+    const t = useTranslations('nav');
     const links = [
-        { name: 'Home', href: 'home' },
-        { name: 'Episafe', href: 'episafe' },
-        { name: 'Team', href: 'team' },
-        { name: 'Experts', href: 'experts' },
-        { name: 'Contact', href: 'contact' }
+        { id: 'home', href: 'home' },
+        { id: 'episafe', href: 'episafe' },
+        { id: 'team', href: 'team' },
+        { id: 'experts', href: 'experts' },
+        { id: 'contact', href: 'contact' }
     ];
-
 
     return (
         <>
@@ -146,10 +149,10 @@ function MobileDrawer({
                     </div>
 
                     <div className='flex flex-col gap-2'>
-                        {links.map((link) => (
+                        {links.map(link => (
                             <a
-                                key={link.name}
-                                onClick={(e) => {
+                                key={link.id}
+                                onClick={e => {
                                     e.preventDefault();
                                     scrollToSection(link.href);
                                     onClose();
@@ -157,27 +160,17 @@ function MobileDrawer({
                                 href={`#${link.href}`}
                                 className='px-4 py-3 rounded-xl hover:bg-white/10 cursor-pointer'>
                                 <span className='text-white text-base'>
-                                    {link.name}
+                                    {t(`links.${link.id}`)}
                                 </span>
                             </a>
                         ))}
                     </div>
 
                     <div className='mt-4 w-full'>
-                        <GetStartedButton />
+                        <LanguageSelector />
                     </div>
                 </div>
             </div>
         </>
-    );
-}
-
-function GetStartedButton() {
-    return (
-        <button className='px-6 py-2 bg-[#007bff] rounded-xl shadow-inner border-2 border-[#007bff]/30 flex items-center transition-transform transform hover:scale-105 active:scale-95'>
-            <span className="text-white text-base font-normal font-['Outfit']">
-                Get Started
-            </span>
-        </button>
     );
 }

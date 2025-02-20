@@ -43,7 +43,9 @@ const HackiniSection = () => {
     ];
 
     return (
-        <SectionWrapper id='hackini' className='py-20 mt-24 relative w-full flex justify-center'>
+        <SectionWrapper
+            id='hackini'
+            className='py-20 mt-24 relative w-full flex justify-center'>
             <div className='relative px-4 md:px-6 lg:px-8 max-w-7xl w-full mx-auto'>
                 <Image
                     src='/images/left-circle.svg'
@@ -73,12 +75,14 @@ const HackiniSection = () => {
                         </div>
 
                         <h2 className='text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-4xl md:text-5xl lg:text-[56px] font-normal'>
-                            Hackini: Your Gateway to Innovation Through Hackathons
+                            Hackini: Your Gateway to Innovation Through
+                            Hackathons
                         </h2>
                         <p className='text-[#d1d1d6] text-lg md:text-xl max-w-3xl'>
-                            Hackini connects students, innovators, and organizations
-                            with hackathons worldwide, creating a dynamic ecosystem
-                            for creativity and problem-solving.
+                            Hackini connects students, innovators, and
+                            organizations with hackathons worldwide, creating a
+                            dynamic ecosystem for creativity and
+                            problem-solving.
                         </p>
                     </motion.div>
 

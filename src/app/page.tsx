@@ -12,7 +12,7 @@ export default function Home() {
             <HeroSection />
             <PartnersSection />
             {/* <h1 className='text-[77px] font-bold leading-[88px] text-center mt-[200px] text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8]'>Explore Our Projects</h1> */}
-            <EpisafeSection /> 
+            <EpisafeSection />
             {/* <HackiniSection /> */}
             <RoadmapSection />
             <TeamSection />

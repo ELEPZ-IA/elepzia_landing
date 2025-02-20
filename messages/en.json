@@ -1,0 +1,126 @@
+{
+    "hero": {
+        "subtitle": "Innovating for a Better Future",
+        "title": "Empowering Lives Through Technology",
+        "description": "Welcome to Elepzia, where innovation meets impact! At Elepzia, we are dedicated to transforming lives through cutting-edge technology, tackling real-world healthcare challenges with groundbreaking solutions."
+    },
+    "partners": {
+        "title": "Our Partners",
+        "description": "We are proud to collaborate with leading institutions"
+    },
+    "nav": {
+        "links": {
+            "home": "Home",
+            "episafe": "Episafe",
+            "team": "Team",
+            "experts": "Experts",
+            "contact": "Contact",
+            "elepzia": "Elepz'ia",
+            "development": "Development Services",
+            "helpCentre": "Help Centre",
+            "faqs": "FAQs",
+            "terms": "Terms of services",
+            "privacy": "Privacy Policy"
+        },
+        "getStarted": "Get Started Now",
+        "english": "English",
+        "french": "French",
+        "arabic": "Arabic"
+    },
+    "footer": {
+        "brandTagline": "Experience the best of the future now!",
+        "platform": "Platform",
+        "support": "Support",
+        "legal": "Legals",
+        "socials": "Socials",
+        "rights": "All rights reserved"
+    },
+    "whyChooseUs": {
+        "tag": "Elepzia",
+        "title": "Why Choose Elepzia?",
+        "description": "We combine cutting-edge technology, strong partnerships, and a passion for innovation to create impactful solutions that enhance lives and drive progress.",
+        "textBlock1": "At Elepz'ia, our mission is to harness the power of technology to create groundbreaking solutions. Our team is dedicated to crafting tools that not only solve challenges but also inspire a better tomorrow.",
+        "textBlock2": "Our clients trust us to deliver exceptional results that transform their vision into reality. Stay tuned for their inspiring stories and feedback.",
+        "textBlock3": "Designed with precision and built with care, our solutions deliver a seamless blend of performance and innovation. From AI-driven insights to cutting-edge wearables, we redefine what's possible.",
+        "textBlock4": "Ready to take the next step in innovation? Let us help you bring your ideas to life with our expertise and creativity. Together, we can shape the future."
+    },
+    "team": {
+        "foundersTag": "Elepzia Founders",
+        "title": "Passionate Innovators\nBehind Elepzia",
+        "description": "Dedicated to revolutionizing healthcare technology through innovation and expertise."
+    },
+    "roadmap": {
+        "tag": "Our Journey",
+        "title": "Milestones and Achievements",
+        "description": "Track our progress and success as we revolutionize healthcare technology.",
+        "data": {
+            "2023": {
+                "description": "🥉 Third place at OSC 2023 (Orange Summer Challenge) with our innovative Episafe solution, demonstrating our commitment to health innovation."
+            },
+            "2024": {
+                "description1": "🤝 Integration into the NVIDIA Inception program, enhancing our internal AI projects with cutting-edge resources.",
+                "description2": "🌍 Participation in ADAPT AFRICA BC & Resilience Conference, highlighting our impact on the healthcare industry with our EPISAFE solution.",
+                "description3": "🎥 Presentation of Episafe on Dclick, a national TV show, with medical experts to raise awareness and collect funds for clinical trials."
+            }
+        }
+    },
+    "experts": {
+        "tag": "Meet Our Experts",
+        "title": "Expert Advisors Driving Innovation",
+        "description": "Our team of expert advisors brings diverse expertise to shape the future of healthcare technology.",
+        "experts": [
+            {
+                "name": "Ghassen Horrigue",
+                "role": "Founder & Executive Manager of the WinWin Club",
+                "description": "Global Head of Operational Excellence at BorderlessCX, Lean SixSigma Black Belt Expert"
+            },
+            {
+                "name": "Pr.Nadia Benali",
+                "role": "Professor of Neurology, CHU Charles Nicolle",
+                "description": "Medical Advisor at Elepzia"
+            },
+            {
+                "name": "Mohamed Khelifi",
+                "role": "Founder of Easy-Bank",
+                "description": "Financial Advisor at Elepzia"
+            }
+        ]
+    },
+    "episafe": {
+        "title": "Episafe: Smart Seizure Prediction & Care",
+        "description": "Episafe is revolutionizing epilepsy care with advanced AI and IoT solutions. Designed for safety, independence, and peace of mind, Episafe empowers both patients and caregivers.",
+        "tag": "Explore Our Project: Episafe",
+        "internationalSurvey": "EpiSafe International Survey",
+        "localSurvey": "EpiSafe Local Survey (Tunisia)",
+        "services": {
+            "predictSeizures": {
+                "title": "Predict Seizures",
+                "description": "Anticipates seizures up to 15 minutes in advance."
+            },
+            "continuousMonitoring": {
+                "title": "Continuous Monitoring",
+                "description": "Tracks physiological signals via a smart bracelet, mobile, and web apps."
+            },
+            "realTimeAlerts": {
+                "title": "Real-Time Alerts",
+                "description": "Sends emergency notifications and shares geolocation for immediate assistance."
+            },
+            "medicationReminders": {
+                "title": "Medication Reminders",
+                "description": "Keeps treatment schedules on track."
+            }
+        }
+    },
+    "contact": {
+        "tag": "Contact",
+        "title": "Contact us",
+        "subtitle": "Give feedback or ask a question",
+        "nameLabel": "Name",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "sendButton": "Send message",
+        "sendingButton": "Sending...",
+        "successMessage": "Message sent successfully!",
+        "errorMessage": "Failed to send message. Please try again."
+    }
+}

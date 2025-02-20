@@ -1,0 +1,126 @@
+{
+    "hero": {
+        "subtitle": "Innover pour un avenir meilleur",
+        "title": "Autonomiser des vies grâce à la technologie",
+        "description": "Bienvenue chez Elepzia, où l'innovation rencontre l'impact ! Chez Elepzia, nous sommes dédiés à transformer des vies grâce à une technologie de pointe, en relevant les défis réels de la santé avec des solutions révolutionnaires."
+    },
+    "partners": {
+        "title": "Nos partenaires",
+        "description": "Nous sommes fiers de collaborer avec des institutions de premier plan"
+    },
+    "nav": {
+        "links": {
+            "home": "Accueil",
+            "episafe": "Episafe",
+            "team": "Équipe",
+            "experts": "Experts",
+            "contact": "Contact",
+            "elepzia": "Elepz'ia",
+            "development": "Services de développement",
+            "helpCentre": "Centre d'aide",
+            "faqs": "FAQs",
+            "terms": "Conditions d'utilisation",
+            "privacy": "Politique de confidentialité"
+        },
+        "getStarted": "Commencez maintenant",
+        "english": "Anglais",
+        "french": "Français",
+        "arabic": "Arabe"
+    },
+    "footer": {
+        "brandTagline": "Vivez le meilleur du futur dès maintenant !",
+        "platform": "Plateforme",
+        "support": "Support",
+        "legal": "Légaux",
+        "socials": "Réseaux",
+        "rights": "Tous droits réservés"
+    },
+    "whyChooseUs": {
+        "tag": "Elepz'ia",
+        "title": "Pourquoi choisir Elepz'ia ?",
+        "description": "Nous allions technologie de pointe, partenariats solides et passion pour l'innovation afin de créer des solutions impactantes qui améliorent des vies et stimulent le progrès.",
+        "textBlock1": "Chez Elepz'ia, notre mission est d'exploiter la puissance de la technologie pour créer des solutions révolutionnaires. Notre équipe est dédiée à la création d'outils qui non seulement résolvent des défis, mais inspirent également un avenir meilleur.",
+        "textBlock2": "Nos clients nous font confiance pour fournir des résultats exceptionnels qui transforment leur vision en réalité. Restez à l'écoute pour découvrir leurs histoires inspirantes et leurs retours.",
+        "textBlock3": "Conçues avec précision et construites avec soin, nos solutions offrent un mélange harmonieux de performance et d'innovation. Des insights pilotés par l'IA aux wearables de pointe, nous redéfinissons ce qui est possible.",
+        "textBlock4": "Prêt à franchir la prochaine étape de l'innovation ? Laissez-nous vous aider à concrétiser vos idées grâce à notre expertise et notre créativité. Ensemble, nous pouvons façonner l'avenir."
+    },
+    "team": {
+        "foundersTag": "Les fondateurs d'Elepz'ia",
+        "title": "Innovateurs passionnés\nDerrière Elepz'ia",
+        "description": "Engagés à révolutionner la technologie de la santé grâce à l'innovation et à l'expertise."
+    },
+    "roadmap": {
+        "tag": "Notre parcours",
+        "title": "Étapes clés et réalisations",
+        "description": "Suivez nos progrès et notre succès dans la révolution de la technologie de la santé.",
+        "data": {
+            "2023": {
+                "description": "🥉 Troisième place à l'OSC 2023 (Orange Summer Challenge) avec notre solution innovante Episafe, démontrant notre engagement envers l'innovation en santé."
+            },
+            "2024": {
+                "description1": "🤝 Intégration au programme NVIDIA Inception, améliorant nos projets internes d'IA avec des ressources de pointe.",
+                "description2": "🌍 Participation à la conférence ADAPT AFRICA BC & Resilience, mettant en avant notre impact sur l'industrie de la santé avec notre solution EPISAFE.",
+                "description3": "🎥 Présentation d'Episafe sur Dclick, une émission de télévision nationale, avec des experts médicaux pour sensibiliser et collecter des fonds pour les essais cliniques."
+            }
+        }
+    },
+    "experts": {
+        "tag": "Rencontrez nos experts",
+        "title": "Conseillers experts à l'œuvre",
+        "description": "Notre équipe de conseillers experts apporte une expertise diversifiée pour façonner l'avenir de la technologie en santé.",
+        "experts": [
+            {
+                "name": "Ghassen Horrigue",
+                "role": "Fondateur et Directeur Exécutif du WinWin Club",
+                "description": "Responsable mondial de l'excellence opérationnelle chez BorderlessCX, Expert Lean SixSigma Black Belt"
+            },
+            {
+                "name": "Pr.Nadia Benali",
+                "role": "Professeur de Neurologie, CHU Charles Nicolle",
+                "description": "Conseillère médicale chez Elepzia"
+            },
+            {
+                "name": "Mohamed Khelifi",
+                "role": "Fondateur de Easy-Bank",
+                "description": "Conseiller financier chez Elepzia"
+            }
+        ]
+    },
+    "episafe": {
+        "title": "Episafe : Prédiction intelligente des crises & soin",
+        "description": "Episafe révolutionne les soins épileptiques avec des solutions IA et IoT avancées. Conçu pour la sécurité, l'indépendance et la tranquillité d'esprit, Episafe autonomise patients et aidants.",
+        "tag": "Découvrez notre projet : Episafe",
+        "internationalSurvey": "Enquête Internationale EpiSafe",
+        "localSurvey": "Enquête Locale EpiSafe (Tunisie)",
+        "services": {
+            "predictSeizures": {
+                "title": "Prédire les crises",
+                "description": "Anticipe les crises jusqu'à 15 minutes à l'avance."
+            },
+            "continuousMonitoring": {
+                "title": "Surveillance continue",
+                "description": "Suit les signaux physiologiques via un bracelet intelligent, des applications mobiles et web."
+            },
+            "realTimeAlerts": {
+                "title": "Alertes en temps réel",
+                "description": "Envoie des notifications d'urgence et partage la géolocalisation pour une assistance immédiate."
+            },
+            "medicationReminders": {
+                "title": "Rappels de médicaments",
+                "description": "Maintient les horaires de traitement à jour."
+            }
+        }
+    },
+    "contact": {
+        "tag": "Contact",
+        "title": "Contactez-nous",
+        "subtitle": "Faites part de vos retours ou posez une question",
+        "nameLabel": "Nom",
+        "emailLabel": "Email",
+        "messageLabel": "Message",
+        "sendButton": "Envoyer le message",
+        "sendingButton": "Envoi en cours...",
+        "successMessage": "Message envoyé avec succès !",
+        "errorMessage": "Échec de l'envoi du message. Veuillez réessayer."
+    }
+}

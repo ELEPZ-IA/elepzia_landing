@@ -1,8 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export function HeroSection() {
+    const t = useTranslations('hero');
+
     return (
         <div
             id='home'
@@ -24,27 +27,22 @@ export function HeroSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
                     className='px-8 py-2 sm:py-3 bg-gradient-to-r from-white/5 to-white/2 rounded-[88px] border border-white/10 backdrop-blur-lg flex items-center'>
-                    <span className="text-white ext-base">
-                        Innovating for a Better Future
-                    </span>
+                    <span className='text-white ext-base'>{t('subtitle')}</span>
                 </motion.div>
                 <motion.h1
                     initial={{ y: -500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.2 }}
                     className='text-center gradiant-title text-4xl md:text-6xl lg:text-7xl font-normal max-w-[95%] xs:max-w-[90%] sm:max-w-full leading-tight xs:leading-normal sm:leading-normal pb-2'>
-                    Empowering Lives Through Technology
-                </motion.h1> 
+                    {t('title')}
+                </motion.h1>
                 <motion.p
                     initial={{ y: 500, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 1.2, delay: 0.4 }}
-                    className="text-center text-[#d1d1d6] text-base sm:text-lg md:text-xl px-2 xs:px-4 sm:px-6 md:px-0 max-w-6xl mx-auto">
-                    Welcome to Elepzia, where innovation meets impact!
-                    <br className='hidden md:block' />
-                    {' '}At Elepzia, we are dedicated to transforming lives through cutting-edge technology, tackling real-world healthcare challenges with groundbreaking solutions.
+                    className='text-center text-[#d1d1d6] text-base sm:text-lg md:text-xl px-2 xs:px-4 sm:px-6 md:px-0 max-w-6xl mx-auto'>
+                    {t('description')}
                 </motion.p>
-                
             </div>
             <div className='absolute bottom-0 left-0 w-full h-[50vh] bg-[#1c1c1e] blur-[250px]' />
         </div>

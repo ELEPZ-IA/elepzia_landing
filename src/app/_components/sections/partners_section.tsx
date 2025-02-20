@@ -1,9 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import { useInView } from 'react-intersection-observer';
 
 const PartnersSection = () => {
+    const t = useTranslations('partners');
     const [titleRef, titleInView] = useInView({
         triggerOnce: true,
         threshold: 0.1
@@ -31,14 +33,14 @@ const PartnersSection = () => {
                 transition={{ duration: 0.6 }}
                 className='relative z-10 flex flex-col justify-start items-center gap-2 sm:gap-3'>
                 <div className="text-center text-white text-xl sm:text-2xl font-normal font-['Outfit'] leading-normal">
-                    Our Partners
+                    {t('title')}
                 </div>
                 <div className="opacity-80 text-center text-white text-base sm:text-lg font-normal font-['Outfit'] leading-relaxed max-w-[90%] sm:max-w-none px-4">
-                    We are proud to collaborate with leading institutions
+                    {t('description')}
                 </div>
             </motion.div>
 
-            <div className='relative z-10 flex flex-col justify-center items-center gap-6 sm:gap-8'>
+            <div className='relative z-10 flex flex-col justify-center items-center gap-6 sm:gap-8 mt-6'>
                 <motion.div
                     ref={partnersRef1}
                     initial={{ opacity: 0, x: -50 }}
@@ -52,7 +54,7 @@ const PartnersSection = () => {
                         'Charles Nicolles',
                         'Elgazala Incubator',
                         'Nvidia Inception'
-                    ].map((partner) => (
+                    ].map(partner => (
                         <div
                             key={partner}
                             className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl sm:text-3xl md:text-[40px] font-normal font-['Outfit'] leading-tight sm:leading-[48px] text-center px-2 sm:px-4">
@@ -70,7 +72,7 @@ const PartnersSection = () => {
                     }}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className='flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8'>
-                    {['Fab Lab', 'Winwin Club', 'Orange'].map((partner) => (
+                    {['Fab Lab', 'Winwin Club', 'Orange'].map(partner => (
                         <div
                             key={partner}
                             className="text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-2xl sm:text-3xl md:text-[40px] font-normal font-['Outfit'] leading-tight sm:leading-[48px] text-center px-2 sm:px-4">

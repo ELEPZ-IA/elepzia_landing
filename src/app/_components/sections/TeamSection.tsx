@@ -2,6 +2,7 @@
 
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 import { motion, useInView } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { SectionWrapper } from '../SectionWrapper';
@@ -42,13 +43,12 @@ const teamMembers = [
 ];
 
 const TeamSection = () => {
+    const t = useTranslations('team');
     const teamRef = useRef(null);
     const teamInView = useInView(teamRef, { once: true, margin: '-100px' });
 
-    const founders = teamMembers.filter(
-        (member) => member.group === 'founders'
-    );
-    const team = teamMembers.filter((member) => member.group === 'team');
+    const founders = teamMembers.filter(member => member.group === 'founders');
+    const team = teamMembers.filter(member => member.group === 'team');
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -88,7 +88,7 @@ const TeamSection = () => {
                     transition={{ duration: 0.6 }}
                     className='px-8 py-3 bg-gradient-to-r from-white/5 to-white/2 rounded-[88px] border border-white/10 backdrop-blur-lg'>
                     <div className="text-center text-white text-base font-light font-['Outfit']">
-                        Elepzia Founders
+                        {t('foundersTag')}
                     </div>
                 </motion.div>
                 <motion.h2
@@ -96,16 +96,14 @@ const TeamSection = () => {
                     animate={teamInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8] text-4xl md:text-[56px] font-normal font-['Outfit'] leading-tight md:leading-[64px]">
-                    Passionate Innovators <br className='hidden md:block' />{' '}
-                    Behind Elepzia
+                    {t('title')}
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={teamInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="text-center text-[#d1d1d6] text-lg md:text-xl font-normal font-['Outfit'] leading-relaxed md:leading-loose max-w-4xl mx-auto">
-                    Dedicated to revolutionizing healthcare technology through
-                    innovation and expertise
+                    {t('description')}
                 </motion.p>
             </motion.div>
 
@@ -115,7 +113,7 @@ const TeamSection = () => {
                 animate={teamInView ? 'visible' : 'hidden'}
                 className='mt-20 max-w-7xl w-full px-4 md:px-6 lg:px-8 mx-auto'>
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
-                    {founders.map((member) => (
+                    {founders.map(member => (
                         <motion.div
                             key={member.email}
                             variants={itemVariants}
@@ -178,7 +176,7 @@ const TeamSection = () => {
                     animate={teamInView ? 'visible' : 'hidden'}
                     className='mt-20'>
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
-                        {team.map((member) => (
+                        {team.map(member => (
                             <motion.div
                                 key={member.email}
                                 variants={itemVariants}

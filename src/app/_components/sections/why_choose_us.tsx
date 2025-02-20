@@ -1,5 +1,6 @@
 'use client';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { SectionWrapper } from '../SectionWrapper';
@@ -59,6 +60,7 @@ const TextBlock = ({
 };
 
 const WhyChooseUs = () => {
+    const t = useTranslations('whyChooseUs');
     const mobileLogoRef = useRef(null);
 
     // Add scroll rotation
@@ -74,17 +76,14 @@ const WhyChooseUs = () => {
                 className='flex flex-col items-center gap-4 sm:gap-6 mb-12 sm:mb-16 md:mb-20'>
                 <div className='px-4 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-white/10 to-white/5 rounded-[88px] border border-white/10 backdrop-blur-lg'>
                     <span className='text-white text-sm sm:text-base font-medium'>
-                        Elepzia
+                        {t('tag')}
                     </span>
                 </div>
                 <h2 className='text-center text-transparent bg-clip-text bg-gradient-to-r from-[#F38E79] via-[#FFEB9E] to-[#B2CFF8]  text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-normal leading-tight sm:leading-[1.2] md:leading-[64px] px-4'>
-                    Why Choose Elepzia?
+                    {t('title')}
                 </h2>
                 <p className="text-center text-[#d1d1d6] text-base sm:text-lg md:text-xl font-normal font-['Outfit'] leading-relaxed md:leading-loose max-w-4xl px-4">
-                    We combine cutting-edge technology, strong partnerships, and
-                    a passion for innovation to create impactful solutions that
-                    enhance lives and drive progress. Let's shape the future
-                    together.
+                    {t('description')}
                 </p>
             </motion.div>
             <div className='container max-w-7xl mx-auto px-2 sm:px-4 py-6 sm:py-10 md:py-20 relative overflow-x-hidden'>
@@ -177,30 +176,10 @@ const WhyChooseUs = () => {
 
                 {/* Text content */}
                 <div className='flex flex-col gap-6 sm:gap-8 md:gap-12 lg:gap-16 relative z-[2]'>
-                    <TextBlock index={0}>
-                        At Elepz'ia, our mission is to harness the power of
-                        technology to create groundbreaking solutions. Our team
-                        is dedicated to crafting tools that not only solve
-                        challenges but also inspire a better tomorrow
-                    </TextBlock>
-
-                    <TextBlock index={1}>
-                        Our clients trust us to deliver exceptional results that
-                        transform their vision into reality. Stay tuned for
-                        their inspiring stories and feedback.
-                    </TextBlock>
-                    <TextBlock index={2}>
-                        Designed with precision and built with care, our
-                        solutions deliver a seamless blend of performance and
-                        innovation. From AI-driven insights to cutting-edge
-                        wearables, we redefine what's possible
-                    </TextBlock>
-
-                    <TextBlock index={3}>
-                        Ready to take the next step in innovation? Let us help
-                        you bring your ideas to life with our expertise and
-                        creativity. Together, we can shape the future.
-                    </TextBlock>
+                    <TextBlock index={0}>{t('textBlock1')}</TextBlock>
+                    <TextBlock index={1}>{t('textBlock2')}</TextBlock>
+                    <TextBlock index={2}>{t('textBlock3')}</TextBlock>
+                    <TextBlock index={3}>{t('textBlock4')}</TextBlock>
                 </div>
             </div>
         </SectionWrapper>

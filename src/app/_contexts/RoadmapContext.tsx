@@ -8,7 +8,11 @@ interface RoadmapContextType {
 
 const RoadmapContext = createContext<RoadmapContextType | null>(null);
 
-export const RoadmapProvider = ({ children }: { children: React.ReactNode }) => {
+export const RoadmapProvider = ({
+    children
+}: {
+    children: React.ReactNode;
+}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
@@ -20,6 +24,7 @@ export const RoadmapProvider = ({ children }: { children: React.ReactNode }) => 
 
 export const useRoadmap = () => {
     const context = useContext(RoadmapContext);
-    if (!context) throw new Error('useRoadmap must be used within RoadmapProvider');
+    if (!context)
+        throw new Error('useRoadmap must be used within RoadmapProvider');
     return context;
 };
